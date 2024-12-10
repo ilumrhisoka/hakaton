@@ -64,5 +64,5 @@ function subm_error(){
 }
 
 function toBD(){
-    window.location = "index.html";
+    window.location = "teacher.html";
 }

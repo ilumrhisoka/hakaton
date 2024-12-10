@@ -12,13 +12,10 @@
   -ms-flex-pack: start;
   justify-content: start;
 }
-<<<<<<< HEAD
 /* .header-area .header-top_area .header_top_wrap .text_wrap a:last-child */
 .profile-img{
   height: 2rem;
 }
-=======
->>>>>>> 7ae2fce865b743db2347f926936006e199e2c140
 
 /* Normal desktop :1200px. */
 /* Normal desktop :992px. */
@@ -1296,15 +1293,7 @@ h3 {
 }
 
 /* line 283, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_header.scss */
-<<<<<<< HEAD
 
-=======
-.header-area .header-top_area .header_top_wrap .text_wrap a:last-child {
-  margin-left: 30px;
-  padding-left: 30px;
-  position: relative;
-}
->>>>>>> 7ae2fce865b743db2347f926936006e199e2c140
 
 @media (max-width: 767px) {
   /* line 283, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_header.scss */
@@ -1339,11 +1328,7 @@ h3 {
 
 /* line 8, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_slider.scss */
 .slider_area .single_slider {
-<<<<<<< HEAD
   height: 560px;
-=======
-  height: 960px;
->>>>>>> 7ae2fce865b743db2347f926936006e199e2c140
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
