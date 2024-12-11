@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вакансии</title>
+<!-- CSS here -->    <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/themify-icons.css">
+<link rel="stylesheet" href="css/templatemo-tale-seo-agency.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            
+            color: #333;
+        }
+        h1{
+            font-weight: bolder;
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            margin-bottom: 2%;
+        }
+        .sections-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px 0;
+            margin-bottom: 40px;
+            list-style-type: none;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .sections-list a {
+            text-decoration: none;
+            color: #14005e;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background: linear-gradient(90deg, #d5dfff, #bfade5);
+            transition: all 0.3s ease;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .sections-list a:hover {
+            background: linear-gradient(90deg, #14005e, #14005e);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .vacancy-box {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .vacancy-box:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .vacancy-title {
+            font-size: 1.5em;
+            color: #14005e;
+            margin-bottom: 10px;
+        }
+
+        .vacancy-description {
+            font-size: 1em;
+            color: #666;
+            margin-bottom: 40px; /* Увеличиваем отступ, чтобы оставить место для кнопки */
+        }
+
+        .apply-button {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            padding: 10px 15px;
+            background: linear-gradient(90deg, #14005e, #14005e);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .apply-button:hover {
+            background: linear-gradient(90deg, #14005e, #14005e);
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <header class="header-area header-sticky" style="position: sticky; top: 0; margin-bottom: 3%;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/logo.svg" alt="" style="max-width: 162px;">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                          <li class="scroll-to-section"><a href="Courses.html">Курсы</a></li>
+                          <li class="scroll-to-section"><a href="vakansii.html" class="active">Вакансии</a></li>
+                          <li class="scroll-to-section"><a href="student.html"><img class="profile-img" src="img/default_profile_pic.jpg" alt=""></a></li>
+                      </ul>   
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+      </header>
+    <h1>IT и разработка</h1>
+<div class="container">
+    <!-- Список разделов -->
+    <ul class="sections-list">
+        <li><a href="vakansii.html">Все вакансии</a></li>
+        <li><a href="marketing.html">Маркетинг</a></li>
+        <li><a href="sales.html">Продажи</a></li>
+        <li><a href="design.html">Дизайн</a></li>
+        <li><a href="admin.html">Администрация</a></li>
+    </ul>
+
+    <!-- Все вакансии в одном столбике -->
+    <div class="vacancy-box">
+        <h3 class="vacancy-title">Frontend Developer</h3>
+        <p class="vacancy-description">Требуется разработчик с опытом работы с React.js и HTML/CSS.</p>
+        <button class="apply-button">Откликнуться</button>
+    </div>
+    <div class="vacancy-box">
+        <h3 class="vacancy-title">Backend Developer</h3>
+        <p class="vacancy-description">Опыт работы с Node.js и базами данных.</p>
+        <button class="apply-button">Откликнуться</button>
+    </div>
+    <div class="vacancy-box">
+        <h3 class="vacancy-title">Digital Marketer</h3>
+        <p class="vacancy-description">Продвижение продуктов через социальные сети и SEO.</p>
+        <button class="apply-button">Откликнуться</button>
+    </div>
+</div>
+</body>
+</html>
+

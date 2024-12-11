@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вакансии</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            
+            color: #333;
+        }
+
+        h1{
+            font-weight: bolder;
+            width: 100%;
+            margin: auto;
+            text-align: center;
+        }
+
+        .container {
+            margin: 10px auto;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        .sections-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px 0;
+            margin-bottom: 40px;
+            list-style-type: none;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .sections-list a {
+            text-decoration: none;
+            color: #14005e;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background: linear-gradient(90deg, #d5dfff, #bfade5);
+            transition: all 0.3s ease;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .sections-list a:hover {
+            background: linear-gradient(90deg, #14005e, #14005e);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .vacancy-box {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .vacancy-box:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .vacancy-title {
+            font-size: 1.5em;
+            color: #14005e;
+            margin-bottom: 10px;
+        }
+
+        .vacancy-description {
+            font-size: 1em;
+            color: #666;
+            margin-bottom: 40px; /* Увеличиваем отступ, чтобы оставить место для кнопки */
+        }
+
+        .apply-button {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            padding: 10px 15px;
+            background-color: rgb(50, 22, 66);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .apply-button:hover {
+            background: linear-gradient(90deg, #14005e, #14005e);
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-area ">
+            <div class="header-top_area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="header_top_wrap d-flex justify-content-between align-items-center">
+                                <div class="text_wrap">
+                                    <iframe src="img/icon.svg"></iframe>
+                                    <p>EduConnect</p>
+                                    <!-- <img src="img/icon.svg" alt=""> -->
+                                </div>
+                                <div class="text_wrap">
+                                    <p style="width: 232.58px;"><a href="Courses.html" class="link-spacing">Курсы</a>|<a href="vakansii.html" class="link-spacing">Вакансии</a>|<a href="student.html"><img class="profile-img" src="img/default_profile_pic.jpg" alt=""></a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </header>
+    <h1>Вакансии</h1>
+<div class="container">
+    <!-- Список разделов -->
+    <ul class="sections-list">
+        <li><a href="it.html">IT и разработка</a></li>
+        <li><a href="marketing.html">Маркетинг</a></li>
+        <li><a href="sales.html">Продажи</a></li>
+        <li><a href="design.html">Дизайн</a></li>
+        <li><a href="admin.html">Администрация</a></li>
+    </ul>
+
+    <!-- Все вакансии в одном столбике -->
+    <div class="vacancy-box">
+        <h3 class="vacancy-title">Frontend Developer</h3>
+        <p class="vacancy-description">Требуется разработчик с опытом работы с React.js и HTML/CSS.</p>
+        <button class="apply-button">Откликнуться</button>
+    </div>
+    <div class="vacancy-box">
+        <h3 class="vacancy-title">Backend Developer</h3>
+        <p class="vacancy-description">Опыт работы с Node.js и базами данных.</p>
+        <button class="apply-button">Откликнуться</button>
+    </div>
+    <div class="vacancy-box">
+        <h3 class="vacancy-title">Digital Marketer</h3>
+        <p class="vacancy-description">Продвижение продуктов через социальные сети и SEO.</p>
+        <button class="apply-button">Откликнуться</button>
+    </div>
+    <div class="vacancy-box">
+        <h3 class="vacancy-title">Копирайтер</h3>
+        <p class="vacancy-description">Создание уникальных текстов для рекламы и сайтов.</p>
+        <button class="apply-button">Откликнуться</button>
+    </div>
+    <div class="vacancy-box">
+        <h3 class="vacancy-title">Менеджер по продажам</h3>
+        <p class="vacancy-description">Работа с клиентами и выполнение плана продаж.</p>
+        <button class="apply-button">Откликнуться</button>
+    </div>
+    <div class="vacancy-box">
+        <h3 class="vacancy-title">Телемаркетолог</h3>
+        <p class="vacancy-description">Продажа услуг по телефону и холодные звонки.</p>
+        <button class="apply-button">Откликнуться</button>
+    </div>
+    <div class="vacancy-box">
+        <h3 class="vacancy-title">Графический дизайнер</h3>
+        <p class="vacancy-description">Создание визуальных концепций для брендов.</p>
+        <button class="apply-button">Откликнуться</button>
+    </div>
+    <div class="vacancy-box">
+        <h3 class="vacancy-title">UX/UI дизайнер</h3>
+        <p class="vacancy-description">Разработка интерфейсов для веб-приложений.</p>
+        <button class="apply-button">Откликнуться</button>
+    </div>
+    <div class="vacancy-box">
+        <h3 class="vacancy-title">Офис-менеджер</h3>
+        <p class="vacancy-description">Организация рабочего процесса в офисе.</p>
+        <button class="apply-button">Откликнуться</button>
+    </div>
+    <div class="vacancy-box">
+        <h3 class="vacancy-title">Администратор</h3>
+        <p class="vacancy-description">Обеспечение работы офиса и поддержка сотрудников.</p>
+        <button class="apply-button">Откликнуться</button>
+    </div>
+</div>
+    <!-- JS here -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/scrollIt.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/nice-select.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/gijgo.min.js"></script>
+
+    <!--contact js-->
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+

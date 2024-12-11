@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Student page</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/templatemo-tale-seo-agency.css">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+    <style>
+        #add_course, #add_vakans{
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            border: none;
+            display: inline-block;
+            text-align: center;
+            background-color: rgb(99, 11, 171);
+            /* padding: 0 15px; */
+            width: 70%;
+            transition: .3s;
+            padding: 3% 6%;
+        }
+        #add_course:hover, #add_vakans:hover{
+            transition: .3s;
+            cursor: pointer;
+            background-color: rgb(133, 54, 198);
+        }
+        #add_course:active, #add_vakans:active{
+            transition: .3s;
+            cursor: pointer;
+            background-color: rgb(76, 6, 134);
+        }
+        .text-col{
+            width: 100%;
+        }
+        .text-col div{
+            height: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items:center; 
+            gap: 3%;
+            height: fit-content;
+            padding: 0;
+            text-align: left;
+            margin-bottom: 3%;
+        }
+    </style>
+</head>
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- header-start -->
+    <header class="header-area header-sticky" style="position: sticky; top: 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/logo.svg" alt="" style="max-width: 162px;">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                          <li class="scroll-to-section"><a href="teacher.html" class="active">Мои курсы</a></li>
+                          <li class="scroll-to-section"><a href="soo.html">Сообщения</a></li>
+                          <li class="scroll-to-section"><a href="teacher.html"><img class="profile-img" src="img/default_profile_pic.jpg" alt=""></a></li>
+    
+                      </ul>   
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+      </header>
+    <!-- header-end -->
+  
+        <div class="resume-box">
+            <h2>Иван</h2>
+            <h2>Иванов</h2>
+            <p>Преподаватель</p>
+        </div>
+
+    
+
+    <!-- slider_area_start -->
+    <div class="slider_area">
+        <div class="slider_active owl-carousel">
+            <section class="text-section">
+                <div class="container">
+                    <div class="row align-items-center">
+                         <div class="col-md-6">
+                           <div class="text-col">
+                                <div>
+                                    <h2 style="vertical-align: middle; width: 100%;">Мои курсы</h2>
+                                </div>
+                                <a href="#" id="add_vakans"> + Добавить курс</a>
+                                <p>Здесь будут представлены материалы ваших курсов</p>
+                               
+                             </div>
+                        </div>
+                        
+                   
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+               </div>
+           
+
+
+
+               <div class="popular_program_area section__padding program__page">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="section_title text-center">
+                              
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="single__program">
+                                        <div class="program_thumb">
+                                            <img src="img/program/c++-removebg-preview (1) (1).png" alt="">
+                                        </div>
+                                        <div class="program__content">
+                                            <span>С++</span>
+                                            <h4>Курсы C++ для начинающих</h4>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
+                                            <a href="#" class="boxed-btn5">Подробнее</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="single__program">
+                                        <div class="program_thumb">
+                                            <img src="img/program/python__1_-removebg-preview.png" alt="">
+                                        </div>
+                                        <div class="program__content">
+                                            <span>Python</span>
+                                            <h4>Курсы Python для начинающих</h4>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
+                                            <a href="#" class="boxed-btn5">Подробнее</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="single__program">
+                                        <div class="program_thumb">
+                                            <img src="img/program/javaaa__1_-removebg-preview.png" alt="">
+                                        </div>
+                                        <div class="program__content">
+                                            <span>Java</span>
+                                            <h4>Курсы Java (продвинутый)</h4>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
+                                            <a href="#" class="boxed-btn5">Подробнее</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="single__program">
+                                        <div class="program_thumb">
+                                            <img src="img/program/1c__1_-removebg-preview.png" alt="">
+                                        </div>
+                                        <div class="program__content">
+                                            <span>1C</span>
+                                            <h4>Курсы 1С для начинающих</h4>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
+                                            <a href="#" class="boxed-btn5">Подробнее</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="single__program">
+                                        <div class="program_thumb">
+                                            <img src="img/program/PHP__1_-removebg-preview.png" alt="">
+                                        </div>
+                                        <div class="program__content">
+                                            <span>PHP</span>
+                                            <h4>Курсы PHP для начинающих</h4>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
+                                            <a href="#" class="boxed-btn5">Подробнее</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="single__program">
+                                        <div class="program_thumb">
+                                            <img src="img/program/haskell__1_-removebg-preview.png" alt="">
+                                        </div>
+                                        <div class="program__content">
+                                            <span>Haskell</span>
+                                            <h4>Курсы Haskell для начинающих</h4>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
+                                            <a href="#" class="boxed-btn5">Подробнее</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <!--contact js-->
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запись с камеры</title>
+    <!-- CSS here -->    <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/themify-icons.css">
+<link rel="stylesheet" href="css/templatemo-tale-seo-agency.css">
+<link rel="stylesheet" href="assets/css/fontawesome.css">
+<link rel="stylesheet" href="assets/css/owl.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #212121;
+            font-family: sans-serif;
+            color: white;
+        }
+
+        #video {
+            /* margin-top: 100px; */
+            max-height: 620px;
+            width: 92%;
+            height: 37%;
+            background-color: #000;
+            border: 2px solid #424242;
+        }
+
+        @media (max-width: 640px) {
+            #video {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        button:hover {
+            background-color: #0077a3;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #666;
+            color: white;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        button.active {
+            background-color: white;
+            color: black;
+        }
+
+        button:disabled {
+            background-color: #666;
+            cursor: default;
+        }
+
+        #download {
+            display: none;
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #008CBA;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        #download:hover {
+            background-color: #0077a3;
+        }
+
+        .controls-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            margin-top: 15px;
+        }
+
+        .controls-container label {
+            display: flex;
+            align-items: center;
+            /* Выравнивание по вертикали */
+        }
+
+        .controls-container img {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            /* Добавлено отступ справа от изображения */
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header-area header-sticky" style="position: sticky; top: 0; margin-bottom: 1%; height: 6.5rem;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/logo.svg" alt="" style="max-width: 162px;">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                          <li class="scroll-to-section"><a href="Courses.html">Курсы</a></li>
+                          <li class="scroll-to-section"><a href="vakansii.html">Вакансии</a></li>
+                          <li class="scroll-to-section"><a href="student.html"><img class="profile-img" src="img/default_profile_pic.jpg" alt=""></a></li>
+                      </ul>   
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+      </header>
+    <video id="video" autoplay></video>
+    <div class="controls-container">
+        <label>
+            <input type="checkbox" id="audioCheck">
+            <img src="mic.png" alt="Микрофон">
+        </label>
+        <label>
+            <input type="checkbox" id="videoCheck">
+            <img src="camera.png" alt="Камера">
+        </label>
+    </div>
+    <div>
+        <button id="record">Начать запись</button>
+        <button id="stop" disabled>Остановить запись</button>
+        <button id="clear" disabled>Стереть запись</button>
+    </div>
+    <a id="download" download="recorded-video.webm">Скачать запись</a>
+
+    <script>
+        const video = document.getElementById('video');
+        const recordButton = document.getElementById('record');
+        const stopButton = document.getElementById('stop');
+        const clearButton = document.getElementById('clear');
+        const downloadLink = document.getElementById('download');
+        const audioCheck = document.getElementById('audioCheck');
+        const videoCheck = document.getElementById('videoCheck');
+
+        let mediaRecorder;
+        let recordedBlobs = [];
+        let stream;
+
+        function startCamera() {
+            navigator.mediaDevices.getUserMedia({
+                video: videoCheck.checked,
+                audio: audioCheck.checked
+            })
+                .then(newStream => {
+                    stream = newStream;
+                    video.srcObject = stream;
+
+                    if (!mediaRecorder) {
+                        mediaRecorder = new MediaRecorder(stream, { mimeType: 'video/webm' });
+                        mediaRecorder.ondataavailable = event => {
+                            if (event.data && event.data.size > 0) {
+                                recordedBlobs.push(event.data);
+                            }
+                        };
+
+                        mediaRecorder.onstop = () => {
+                            const blob = new Blob(recordedBlobs, { type: 'video/webm' });
+                            const url = URL.createObjectURL(blob);
+                            downloadLink.href = url;
+                            downloadLink.style.display = 'block';
+                            recordedBlobs = [];
+                            clearButton.disabled = false;
+                        };
+                    } else {
+                        mediaRecorder.stream = stream;
+                    }
+
+                })
+                .catch(error => {
+                    console.error('Ошибка:', error);
+                });
+        }
+
+        audioCheck.addEventListener('change', startCamera);
+        videoCheck.addEventListener('change', startCamera);
+
+        recordButton.addEventListener('click', () => {
+            mediaRecorder.start();
+            recordButton.disabled = true;
+            stopButton.disabled = false;
+            clearButton.disabled = true;
+            downloadLink.style.display = 'none';
+        });
+
+        stopButton.addEventListener('click', () => {
+            mediaRecorder.stop();
+            recordButton.disabled = false;
+            stopButton.disabled = true;
+        });
+
+        clearButton.addEventListener('click', () => {
+            recordedBlobs = [];
+            downloadLink.href = '';
+            downloadLink.style.display = 'none';
+            clearButton.disabled = true;
+            if (downloadLink.href) {
+                URL.revokeObjectURL(downloadLink.href);
+            }
+        });
+
+        document.querySelector('#record').addEventListener('click', event => {
+            event.target.style.backgroundColor = 'gray';
+            document.getElementById("stop").style.backgroundColor = '#036';
+        })
+        document.querySelector('#stop').addEventListener('click', event => {
+            document.getElementById("record").style.backgroundColor = '#666';
+
+            document.getElementById("stop").style.backgroundColor = '#666';
+        })
+        startCamera();
+    </script>
+</body>
+
+</html>

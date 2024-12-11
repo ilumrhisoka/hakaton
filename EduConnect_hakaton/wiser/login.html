@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="css/sign_up.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Авторизация</h1>
+        <form action="#">
+            <input type="text" placeholder="Логин">
+            <input type="text" placeholder="Пароль">
+            <div class="recover">
+                <a href="#">Забыли пароль?</a>
+            </div>
+        </form>
+        <p id="error-p" style="margin: 0 20px;"></p>
+        <button onclick="login()">Войти</button>
+        <div class="member">
+            Нет аккаунта? <a href="./sign_up.php">
+                Зарегистриоваться здесь
+            </a>
+        </div>
+    </div>
+    <script>
+        function login(){
+            document.querySelector("#error-p").textContent = "*Заполните все поля";
+            // document.getElementById("error-p").textContent = "";
+            let success = true;
+            let inp_list = document.querySelectorAll("input");
+            for(let i = 0; i < inp_list.length; i++){
+                if(inp_list[i].value == ""){
+                    document.querySelector("#error-p").textContent = "*Заполните все поля";
+                    success = false;
+                    break;
+                }
+            }
+            if (success){
+                window.location = "student.html";
+            }
+            else{
+                document.querySelector("#error-p").innerHTML = "*Заполните все поля";
+            }
+        }
+    </script>
+</body>
+</html>

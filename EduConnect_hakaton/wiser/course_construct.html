@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Education</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+<!-- CSS here -->    <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/themify-icons.css">
+<link rel="stylesheet" href="css/templatemo-tale-seo-agency.css">
+     <style>
+        .task-constr-div{
+            margin:0;
+            /* margin-top: 3%; */
+            width: max-content;
+            display: flex;
+            flex-direction: column;
+        }
+        .create-course{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            background-color: rgb(99, 11, 171);
+            /* padding: 3%; */
+            /* align-items: center; */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        main{
+            display: flex;
+            width: max-content;
+            flex: 1fr 1fr;
+            align-items: top;
+            align-content: center;
+            margin: auto;
+            gap: 10%;
+        }
+        .create-course, .course-res{
+            border-radius: 1vw;
+            min-width: 30vw;
+            width: fit-content;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 2vw;
+            background-color: #fbf9ff;
+            /* margin: auto; */
+        }
+     </style>
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- header-start -->
+    <header class="header-area header-sticky" style="position: sticky; top: 0; margin-bottom: 3%;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/logo.svg" alt="" style="max-width: 162px;">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                          <li class="scroll-to-section"><a href="teacher.html">Мои курсы</a></li>
+                          <li class="scroll-to-section"><a href="soo.html">Сообщения</a></li>
+                          <li class="scroll-to-section"><a href="teacher.html"><img class="profile-img" src="img/default_profile_pic.jpg" alt=""></a></li>
+                      </ul>   
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+      </header>
+    <!-- header-end -->
+    <main>
+        <div action="#">
+            <div class="create-course">
+                <h1>Курс "название"</h1>
+                <label for="theme">Добавьте тему занятия</label>
+                <input type="text" name="theme" id="task-theme" required>
+                <label>Добавить задание</label>
+                <div class="column">
+                    <div class="select-box" >
+                        <select required>
+                            <option value="">Вид задания</option>
+                            <option class="req_opt">Лекция</option>
+                            <option class="req_opt">Квиз</option>
+                            <option class="req_opt">Задание с кодом</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="task-constr-div">
+
+                </div>
+                <div class=".btn-cont">
+                    <button id="add-task" onclick="append_task()">Добавить задание</button>
+                    <button id="add-course">Опубликовать</button>
+                </div>
+            </div>
+        </div>
+        <div class="course-res">
+            <h1>Курс "название"</h1>
+            <div class="all-tasks">
+
+            </div>
+        </div>
+    </main>
+    <script src="js/main.js"></script>
+    <!--contact js-->
+    <script src="js/course_const.js"></script>
+
+
+</body>
+
+</html>
